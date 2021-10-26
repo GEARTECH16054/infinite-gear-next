@@ -2,7 +2,7 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Landing.module.css'
-import Header from '../components/Header/header'
+import Header from '../components/Header/Header'
 
 const Landing: NextPage = () => {
   return (
@@ -13,6 +13,7 @@ const Landing: NextPage = () => {
         <link rel="icon" href="favicon.ico" />
       </Head>
       <Header/>
+      
     </div>
   )
 }
