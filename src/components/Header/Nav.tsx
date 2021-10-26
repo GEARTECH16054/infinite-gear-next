@@ -1,9 +1,8 @@
 import React from 'react'
+import Button from './Button';
 import { Hul } from './styles'
 
-const Nav = ({open}:any) => {
-    console.log(open);
-    
+const Nav = ({open}:any) => {    
     return (
             <Hul open={open}>
                 <li>
@@ -27,6 +26,11 @@ const Nav = ({open}:any) => {
                 <li>
                     <a>Contact</a>
                 </li>
+
+                <Button text="Sign Up"/>
+                
+                <Button text="Sign In" negative={true}/>
+                
             </Hul>
     )
 }

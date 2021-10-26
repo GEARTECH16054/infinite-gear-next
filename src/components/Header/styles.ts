@@ -8,13 +8,20 @@ interface BtnProps{
     border?: boolean;
 }
 
-export const HeaderContainer = styled.div`
+interface ScrollProps{
+    scroll:number;
+}
+
+export const HeaderContainer = styled.div<ScrollProps>`
 display:flex;
+overflow: auto;
+align-self: flex-start;
+top:0;
 width:100%;
 justify-content: space-around;
 transition:0.6s;
 padding: 0 20px;
-background-color:transparent;
+background-color:${(ScrollProps)=>(ScrollProps.scroll > 10 ? "transparent":"#000")};
 user-select: none;
 
 `;
@@ -27,6 +34,29 @@ font-size:2em;
 text-transform:uppercase;
 letter-spacing:2px;
 transition:0.6s;
+`;
+
+
+export const ButtonContainer = styled.div<BtnProps>`
+width:5rem;
+border-color:${(Btnprops) => (Btnprops.negative ? ' #112037':'#333')};
+border-radius:5px;
+height:2rem;
+margin:0.8rem 0.8rem;
+justify-content: center;
+align-items: center;
+display:flex;
+color:#112037;
+transition:all 0.1s ease;
+border:${(Btnprops) =>(Btnprops.negative ? '2px #112037 solid':'none')};
+
+    &:hover{
+        background-color:#112037;
+        color:#fff;
+        border-radius:5px;
+        transition:all 0.2s linear;
+        
+        }
 `;
 
 export const Hul = styled.ul<props>`
@@ -100,28 +130,4 @@ export const BurgerIcon = styled.div<props>`
             transform: ${(props) =>(props.open ? 'rotate(-45deg);':'rotate(0);')}
         }
     }
-`;
-
-export const ButtonContainer = styled.div<BtnProps>`
-width:7rem;
-border-color:${(Btnprops) => (Btnprops.negative ? ' #112037':'#333')};
-border-radius:5px;
-height:2rem;
-margin:1.5rem 0;
-justify-self: center;
-align-self: center;
-justify-content: center;
-align-items: center;
-display:flex;
-color:#112037;
-transition:all 0.1s ease;
-border:${(Btnprops) =>(Btnprops.negative ? '2px #112037 solid':'none')};
-
-    &:hover{
-        background-color:#112037;
-        color:#fff;
-        border-radius:5px;
-        transition:all 0.2s linear;
-        
-        }
 `;

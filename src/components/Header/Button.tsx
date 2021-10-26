@@ -11,11 +11,9 @@ const Button: React.FC<ButtonProps> = ({text, border, negative, ...rest}) => {
 
     
     return (
-        <a>
         <ButtonContainer negative={negative} border={border} >
             {text}
         </ButtonContainer>
-        </a>
     )
 }
 
