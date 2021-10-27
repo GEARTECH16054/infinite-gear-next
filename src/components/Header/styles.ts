@@ -21,9 +21,12 @@ width:100%;
 justify-content: space-around;
 transition:0.6s;
 padding: 0 20px;
-background-color:${(ScrollProps)=>(ScrollProps.scroll > 10 ? "transparent":"#000")};
+border-radius:5px;
+height:5rem;
+background-color:${(ScrollProps)=>(ScrollProps.scroll > 80 ? "#DDB34D":"transparent")};
 user-select: none;
-
+position: -webkit-fixed;
+position: fixed;
 `;
 
 export const Logo = styled.a`
