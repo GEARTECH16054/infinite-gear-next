@@ -16,7 +16,7 @@ const Header: React.FC = ()=>{
     
     return(
         <St.HeaderContainer scroll={scrollY} className='header'>
-            <St.Logo>{scrollY}</St.Logo>
+            <St.Logo>Infinite<br/>Gear</St.Logo>
             <Burger/>
         </St.HeaderContainer>
     )

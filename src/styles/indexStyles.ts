@@ -46,5 +46,7 @@ ul{
     list-style:none;
     grid-gap:10px;
     display:grid;
+    grid-gap:1rem;
+    grid-template-columns:1fr 1fr;
 }   
 `;

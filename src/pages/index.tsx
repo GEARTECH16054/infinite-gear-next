@@ -2,7 +2,7 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
 import Header from '../components/Header/Header'
-import { Container, ImgMain, Main, Title } from '../styles/indexStyles'
+import { Container, Main, Title } from '../styles/indexStyles'
 import MainBg from '../components/mainBg/MainBg'
 import RSFLogo from '../images/RSF.svg'
 import Button from '../components/Header/Button'
@@ -40,17 +40,24 @@ const Landing: NextPage = () => {
         </Title>
         <Main>
           <ul>
-              <li>Expandir as habilidades necessárias para se tornar uma equipe competitiva na comunidade da FTC</li>
-
-              <li>Continuar a espalhar a emoção da robótica em nossa comunidade, promovendo a formação de novas equi-
-              pes da FIRST (FLL e FTC)</li>
-
-              <li> Ajudar a inspirar e motivar colegas a buscar trabalho nas áreas de Engenharia, Tecnologia, Ciência, Arte e
-              Matemática</li>
-              <li>Conectar-se com empresas de engenharia, nossa comunidade local e nosso governo local e estadual</li>
-              <li>Desenvolvimento de liderança de equipe, habilidades de colaboração</li>
-              <li>Integrar ao máximo nossa comunidade com a robótica</li>
-              <li>Passar nosso conhecimento para as equipes, principalmente as iniciantes</li>
+              <li>
+                <div style={{display:"grid",justifyItems:"center",alignItems:"center"}}>
+                <Image alt="placeholder" width="100" height="100" src={RSFLogo}/>
+                <br/>
+                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget 
+                dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur 
+                ridiculus mus. Donec quam felis
+                </div>
+              </li>
+              <li>
+                <div style={{display:"grid",justifyItems:"center",alignItems:"center"}}>
+                  <Image alt="placeholder" width="100" height="100" src={RSFLogo}/>
+                  <br/>
+                  Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget 
+                dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur 
+                ridiculus mus. Donec quam felis
+                </div>
+                </li>
           </ul>
         </Main>
       </div>
