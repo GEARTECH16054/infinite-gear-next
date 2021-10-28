@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import Image from 'next/Image';
 
 export const Container = styled.div`
 flex-direction: column;
@@ -36,12 +35,22 @@ font-family:MontSerrat;
 font-weight:700;
 justify-content:center;
 display:flex;
+color:inherit;
 `;
 
 export const Main = styled.div`
 font-family:Antonio;
-font-weight:600;
+font-weight:400;
 font-size:22px;
+div{
+    display:grid;
+    justify-items:center;
+    align-items:center;
+    text-align:center;
+}
+img{
+    filter:invert(1);
+}
 ul{
     list-style:none;
     grid-gap:10px;
