@@ -4,7 +4,7 @@ import { Hul } from './styles'
 
 const Nav = ({open}:any) => {    
     return (
-            <Hul open={open}>
+            <Hul open={open} style={{zIndex:-1}}>
                 <li>
                     <a>Home</a>
                 </li>
@@ -27,9 +27,9 @@ const Nav = ({open}:any) => {
                     <a>Contact</a>
                 </li>
 
-                <Button text="Sign Up"/>
+                <Button text="Sign Up" xsize={5}/>
                 
-                <Button text="Sign In" negative={true}/>
+                <Button text="Sign In" negative={true} xsize={5}/>
                 
             </Hul>
     )

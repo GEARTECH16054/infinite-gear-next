@@ -4,14 +4,14 @@ import  { ButtonContainer } from './styles'
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement>{
     text: string;
-    border?:boolean;
+    xsize:number;
     negative?:boolean;
 }
-const Button: React.FC<ButtonProps> = ({text, border, negative, ...rest}) => {
+const Button: React.FC<ButtonProps> = ({text, xsize, negative, ...rest}) => {
 
     
     return (
-        <ButtonContainer negative={negative} border={border} >
+        <ButtonContainer negative={negative} xsize={xsize} >
             {text}
         </ButtonContainer>
     )

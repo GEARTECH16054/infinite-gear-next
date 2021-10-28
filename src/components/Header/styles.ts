@@ -5,7 +5,7 @@ open: boolean;
 
 interface BtnProps{
     negative?: boolean;
-    border?: boolean;
+    xsize:number
 }
 
 interface ScrollProps{
@@ -19,11 +19,11 @@ align-self: flex-start;
 top:0;
 width:100%;
 justify-content: space-around;
-transition:0.6s;
+transition:0.3s;
 padding: 0 20px;
 border-radius:5px;
 height:5rem;
-background-color:${(ScrollProps)=>(ScrollProps.scroll > 80 ? "#DDB34D":"transparent")};
+background-color:${(ScrollProps)=>(ScrollProps.scroll > 60 ? "#DDB34D":"transparent")};
 user-select: none;
 position: -webkit-fixed;
 position: fixed;
@@ -41,8 +41,8 @@ transition:0.6s;
 
 
 export const ButtonContainer = styled.div<BtnProps>`
-width:5rem;
-border-color:${(Btnprops) => (Btnprops.negative ? ' #112037':'#333')};
+width:${(BtnProps)=>BtnProps.xsize}rem;
+border-color:${(BtnProps) => (BtnProps.negative ? ' #112037':'#333')};
 border-radius:5px;
 height:2rem;
 margin:0.8rem 0.8rem;

@@ -2,7 +2,7 @@ import React from 'react'
 import Image from 'next/image'
 import GeartechLogo from '../../images/logo-geartech.svg'
 import InfinityLogo from '../../images/logo-infinity.svg'
-import { ImgG, ImgI } from '../../styles/globalsc'
+import { ImgG, ImgI } from '../../styles/indexStyles'
 
 const MainBg = () => {
     return (

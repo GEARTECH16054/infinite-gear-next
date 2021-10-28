@@ -29,3 +29,22 @@ overflow:hidden;
 top:50px;
 left:30rem;
 `;
+export const Title = styled.div`
+margin-top:20px;
+font-size:26px;
+font-family:MontSerrat;
+font-weight:700;
+justify-content:center;
+display:flex;
+`;
+
+export const Main = styled.div`
+font-family:Antonio;
+font-weight:600;
+font-size:22px;
+ul{
+    list-style:none;
+    grid-gap:10px;
+    display:grid;
+}   
+`;
