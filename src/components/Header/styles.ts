@@ -38,6 +38,7 @@ font-size:1.5em;
 text-transform:uppercase;
 letter-spacing:2px;
 transition:0.6s;
+z-index:-2;
 `;
 
 
@@ -61,6 +62,10 @@ border:${(Btnprops) =>(Btnprops.negative ? '2px #112037 solid':'none')};
         transition:all 0.2s linear;
         
         }
+@media(max-width:500px){
+    width:${(BtnProps)=>BtnProps.xsize * 2}rem;
+    height:3rem;
+}
 `;
 
 export const Hul = styled.ul<props>`
@@ -88,14 +93,22 @@ li{
 @media (max-width:890px){
     flex-flow:column nowrap;
     position:fixed;
-    top:-15px;
+    z-index:999;
+    top:-10vh;
     right:0;
-    height:100vh;
-    width:200px;
+    font-size:26px;
+    height:210vh;
+    width:50vh;
     padding-top:3rem;
     transform:${(props)=>(props.open ? 'translateX(0)':'translateX(100%)')};
     transition:transform 0.2s ease-in-out;
     background-color: #f6d33a;
+    
+li{
+    a{
+        font-size:36px;
+    }
+}
 }
 
 `;
@@ -106,7 +119,6 @@ export const BurgerIcon = styled.div<props>`
     position:fixed;
     top:15px;
     right:20px;
-    z-index:20;
     display:none;
 
     @media(max-width:890px){
