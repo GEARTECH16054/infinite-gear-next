@@ -1,6 +1,6 @@
 import { NextComponentType } from 'next'
 import React,{useEffect, useState} from 'react'
-import * as St from '../MainHeader/styles';
+import * as St from './styles';
 import styles from '../../styles/Header.module.css';
 import Nav from './Nav'
 import Burger from './Burger';

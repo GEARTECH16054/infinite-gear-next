@@ -1,13 +1,12 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
-import Header from '../components/Header/Header'
+import MainHeader from '../components/MainHeader/MainHeader'
 import { Container, Main, Title } from '../styles/indexStyles'
 import MainBg from '../components/mainBg/MainBg'
-import RSFLogo from '../images/RSF.svg'
 import InfinityLogo from '../images/logo-infinity.svg'
 import GeartechLogo from '../images/logo-geartech.svg'
-import Button from '../components/Header/Button'
+import Button from '../components/MainHeader/Button'
 
 
 const Landing: NextPage = () => {
@@ -45,7 +44,7 @@ const Landing: NextPage = () => {
           <ul>
               <li>
                 <div style={{display:"grid",justifyItems:"center",alignItems:"center",textAlign:"center"}}>
-                <Image alt="placeholder" width="120" height="120" src={GeartechLogo}/>
+                <Image alt="placeholder" width="140" height="140" src={GeartechLogo}/>
                 <br/>
                 Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis
                 </div>
@@ -62,7 +61,7 @@ const Landing: NextPage = () => {
       </div>
       
     </Container>
-    <Header/>
+    <MainHeader/>
     </>
   )
 }

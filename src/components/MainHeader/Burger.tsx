@@ -1,6 +1,6 @@
 import React,{useState} from 'react'
 import Nav from './Nav'
-import { BurgerIcon } from '../MainHeader/styles'
+import { BurgerIcon } from './styles'
 
 const Burger = () => {
     const [open, setOpen] = useState(false)

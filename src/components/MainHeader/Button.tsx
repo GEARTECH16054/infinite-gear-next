@@ -1,6 +1,6 @@
 import { ButtonHTMLAttributes } from 'hoist-non-react-statics/node_modules/@types/react'
 import React from 'react'
-import  { ButtonContainer } from '../MainHeader/styles'
+import  { ButtonContainer } from './styles'
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement>{
     text: string;

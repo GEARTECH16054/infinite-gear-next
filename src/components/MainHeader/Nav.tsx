@@ -1,11 +1,9 @@
-import React,{useState} from 'react'
+import React from 'react'
 import Button from './Button';
-import { Hul } from '../MainHeader/styles'
+import { Hul } from './styles'
 import Link from 'next/link'
 
-const Nav = ({open}:any) => { 
-    let logged = true;
-
+const Nav = ({open}:any) => {    
     return (
             <Hul open={open} style={{zIndex:-1}}>
                 <li>
@@ -43,11 +41,11 @@ const Nav = ({open}:any) => {
                         <a>Contato</a>
                     </Link>
                 </li>
-                {logged ? (<>
-                <Button text="Login" onClick={() => logged = !logged } xsize={5}/>
-                <Button text="Cadastro" onClick={() => console.log("clicked") } negative={true} xsize={6}/>
-                </>)
-                : null}
+
+                <Button text="Login" xsize={5}/>
+                
+                <Button text="Cadastro" negative={true} xsize={6}/>
+                
             </Hul>
     )
 }

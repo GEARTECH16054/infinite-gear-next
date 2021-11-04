@@ -43,8 +43,8 @@ z-index:-2;
 
 
 export const ButtonContainer = styled.div<BtnProps>`
-width:${(BtnProps)=>BtnProps.xsize}rem;
-border-color:${(BtnProps) => (BtnProps.negative ? ' #112037':'#333')};
+width:${(props)=> (props.xsize+'rem')};
+border-color:#112037;
 border-radius:5px;
 height:2rem;
 margin:0.8rem 0.8rem;
@@ -53,7 +53,7 @@ align-items: center;
 display:flex;
 color:#112037;
 transition:all 0.1s ease;
-border:${(Btnprops) =>(Btnprops.negative ? '2px #112037 solid':'none')};
+border:${(props) =>(props.negative ? '2px #112037 solid':'none')};
 
     &:hover{
         background-color:#112037;
@@ -62,8 +62,8 @@ border:${(Btnprops) =>(Btnprops.negative ? '2px #112037 solid':'none')};
         transition:all 0.2s linear;
         
         }
-@media(max-width:500px){
-    width:${(BtnProps)=>BtnProps.xsize * 2}rem;
+@media(max-width:1000px){
+    width:${(props)=>props.xsize * 1.5}rem;
     height:3rem;
 }
 `;
@@ -72,13 +72,13 @@ export const Hul = styled.ul<props>`
 list-style:none;
 display:flex;
 flex-flow:row nowrap;
-
-
+font-weight:400;
+font-family:Gotham;
 li{
     padding:18px 5px;
     color:  #112037;
     a{
-        font-size:16px;
+        font-size:13px;
         padding:5px;
     }
     &:hover a{
@@ -86,29 +86,36 @@ li{
         color:#fff;
         border-radius:5px;
         transition:all 0.2s linear;
-        
         }
 }
 
-@media (max-width:890px){
-    flex-flow:column nowrap;
-    position:fixed;
-    z-index:999;
-    top:-10vh;
-    right:0;
-    font-size:26px;
-    height:210vh;
-    width:50vh;
-    padding-top:3rem;
-    transform:${(props)=>(props.open ? 'translateX(0)':'translateX(100%)')};
-    transition:transform 0.2s ease-in-out;
-    background-color: #f6d33a;
-    
-li{
-    a{
-        font-size:36px;
-    }
+
+@media (max-width:1050px){
+        flex-flow:column nowrap;
+        position:fixed;
+        z-index:999;
+        top:-10vh;
+        right:0;
+        font-size:26px;
+        height:210vh;
+        width:50vh;
+        padding-top:3rem;
+        transform:${(props)=>(props.open ? 'translateX(0)':'translateX(100%)')};
+        transition:transform 0.2s ease-in-out;
+        background-color: #f6d33a;
+        
+        li{
+            a{
+                font-size:26px;
+            }
+        }
 }
+@media(max-width:1050px){
+    li{
+        a{
+            font-size:28px;
+        }
+    }
 }
 
 `;
@@ -121,7 +128,7 @@ export const BurgerIcon = styled.div<props>`
     right:20px;
     display:none;
 
-    @media(max-width:890px){
+    @media(max-width:1000px){
         justify-content:space-around;
         display:flex;
         flex-flow:column nowrap;
