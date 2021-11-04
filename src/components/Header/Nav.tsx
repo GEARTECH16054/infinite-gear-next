@@ -2,10 +2,10 @@ import React,{useState} from 'react'
 import Button from './Button';
 import { Hul } from '../MainHeader/styles'
 import Link from 'next/link'
+import { useRouter } from 'next/router';
 
 const Nav = ({open}:any) => { 
-    let logged = true;
-
+    const router = useRouter();
     return (
             <Hul open={open} style={{zIndex:-1}}>
                 <li>
@@ -19,35 +19,34 @@ const Nav = ({open}:any) => {
                     </Link>
                 </li>
                 <li>
-                    <Link href="/">
+                    <Link href="/aboutUs">
                         <a>Sobre Nós</a>
                     </Link>
                 </li>
                 <li>
-                    <Link href="/">
+                    <Link href="/robots">
                         <a>Robôs</a>
                     </Link>
                 </li>
                 <li>
-                    <Link href="/">
+                    <Link href="/sponsors">
                         <a>Patrocinadores</a>
                     </Link>
                 </li>
                 <li>
-                    <Link href="/">  
+                    <Link href="/outreach">  
                         <a>Outreach</a>
                     </Link>
                 </li>
                 <li>
-                    <Link href="/">
+                    <Link href="/contactUs">
                         <a>Contato</a>
                     </Link>
                 </li>
-                {logged ? (<>
-                <Button text="Login" onClick={() => logged = !logged } xsize={5}/>
-                <Button text="Cadastro" onClick={() => console.log("clicked") } negative={true} xsize={6}/>
-                </>)
-                : null}
+                
+                <Button text="Login" path="/login" xsize={5}/>
+                <Button text="Cadastro" path="/signin" negative={true} xsize={6}/>
+                
             </Hul>
     )
 }

@@ -34,11 +34,12 @@ export const Logo = styled.a`
 position:relative;
 font-weight: 700;
 color:  #112037;
-font-size:1.5em;
+font-size:2em;
 text-transform:uppercase;
 letter-spacing:2px;
 transition:0.6s;
 z-index:-2;
+font-family:Bitsumishi;
 `;
 
 
