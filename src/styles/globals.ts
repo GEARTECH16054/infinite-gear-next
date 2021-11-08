@@ -9,9 +9,7 @@ margin: 0;
 font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
 Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 background-color: #fff;
-@media(max-width:500px){
-width:200vw;
-}
+width:100% auto;
 }
 
 a {

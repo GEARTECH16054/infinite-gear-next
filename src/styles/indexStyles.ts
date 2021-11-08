@@ -54,12 +54,29 @@ ul{
 `;
 
 export const Container = styled.div`
-flex-direction: column;
-justify-content: center;
-align-items: center;
-display:flex;
-overflow: hidden;
+display:grid;
+padding:11vh;
+grid-template-columns:1fr 1fr 1fr;
+grid-template-rows:.1fr 1fr 1fr ;
+grid-template-areas:"tit tit img" 
+                    "txt txt img"
+                    "txt txt img";
 
+div{
+    justify-self:center;
+    align-content:center;
+}
+.title{
+    grid-area:tit;
+    
+}
+.text{
+    padding:15px;
+    grid-area:txt;
+}
+.image{
+    grid-area:img;
+}
 @media(max-width:500px){
     &.top{
     height:200vh;
@@ -70,6 +87,5 @@ overflow: hidden;
         font-size:36px;
     }
     }
-
 }
 `;
