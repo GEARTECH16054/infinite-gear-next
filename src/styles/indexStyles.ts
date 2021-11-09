@@ -55,12 +55,20 @@ ul{
 
 export const Container = styled.div`
 display:grid;
+height:100vh;
 padding:11vh;
 grid-template-columns:1fr 1fr 1fr;
-grid-template-rows:.1fr 1fr 1fr ;
-grid-template-areas:"tit tit img" 
+grid-template-rows:.1fr 0fr 1fr ;
+grid-template-areas:"txt txt img" 
                     "txt txt img"
                     "txt txt img";
+@media(max-width:890px){
+    grid-template-areas:
+                    "txt txt txt" 
+                    "txt txt txt"
+                    "txt txt txt";
+    padding:0vh;
+}
 
 div{
     justify-self:center;
@@ -68,14 +76,18 @@ div{
 }
 .title{
     grid-area:tit;
-    
 }
+
 .text{
     padding:15px;
     grid-area:txt;
+    padding:15% 50px;
 }
 .image{
     grid-area:img;
+    @media(max-width:890px){
+        display:none;
+    }
 }
 @media(max-width:500px){
     &.top{

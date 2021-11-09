@@ -22,7 +22,6 @@ width:100%;
 justify-content: space-around;
 transition:0.3s;
 padding: 0 20px;
-border-radius:5px;
 height:5rem;
 background-color:${(ScrollProps)=>(ScrollProps.scroll > 60 ? "#DDB34D":"transparent")};
 user-select: none;
