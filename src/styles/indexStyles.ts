@@ -62,7 +62,7 @@ grid-template-rows:.1fr 0fr 1fr ;
 grid-template-areas:"txt txt img" 
                     "txt txt img"
                     "txt txt img";
-@media(max-width:890px){
+@media(max-width:1000px){
     grid-template-areas:
                     "txt txt txt" 
                     "txt txt txt"
@@ -85,7 +85,7 @@ div{
 }
 .image{
     grid-area:img;
-    @media(max-width:890px){
+    @media(max-width:1000px){
         display:none;
     }
 }

@@ -90,7 +90,7 @@ li{
 }
 
 
-@media (max-width:1050px){
+@media (max-width:1000px){
         flex-flow:column nowrap;
         position:fixed;
         z-index:999;
@@ -110,7 +110,7 @@ li{
             }
         }
 }
-@media(max-width:1050px){
+@media(max-width:1000px){
     li{
         a{
             font-size:28px;
