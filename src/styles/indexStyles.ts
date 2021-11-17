@@ -57,6 +57,7 @@ export const Container = styled.div`
 display:grid;
 height:100vh;
 padding:11vh;
+justify-content:space-between;
 grid-template-columns:1fr 1fr 1fr;
 grid-template-rows:.1fr 0fr 1fr ;
 grid-template-areas:"txt txt img" 
