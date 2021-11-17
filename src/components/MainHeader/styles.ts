@@ -102,7 +102,7 @@ li{
         padding-top:3rem;
         transform:${(props)=>(props.open ? 'translateX(0)':'translateX(100%)')};
         transition:transform 0.2s ease-in-out;
-        background-color: #f6d33a;
+        background-color: var(--in-gold);
         
         li{
             a{

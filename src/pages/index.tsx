@@ -2,7 +2,7 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
 import MainHeader from '../components/MainHeader/MainHeader'
-import { Container, Main, Title } from '../styles/indexStyles'
+import { Container, Main, Title, Teams } from '../styles/indexStyles'
 import MainBg from '../components/mainBg/MainBg'
 import InfinityLogo from '../images/logo-infinity.svg'
 import GeartechLogo from '../images/logo-geartech.svg'
@@ -26,9 +26,19 @@ const Landing: NextPage = () => {
       </div>
       <div className='image'><Image alt="RSF logo" src={RSFLogo}/></div>
     </Container>
-    <Container>
-      
-    </Container>
+    <Teams >
+      <div id="resume">
+        <Image src={InfinityLogo} alt="logo infinity" width={300} height={300}/>
+        <br/>
+        A equipe foi fundada por José Junior e Lais de Paiva na Escola SESI Canaã (Goiânia- GO- BR)no ano de 2020. No início, os membros trabalhavam em ambas as categorias (FTC e FRC). Todavia, em agosto de 2021, os membros da equipe Geartech (FTC - Ultimate Goal - 2020/21) oficializaram-se como Infinity BR, uma equipe de FRC. Atualmente, a equipe é composta por 16 membros, todos estudantes da escola SESI Canaã, e 16 mentores, que incluem engenheiros, professores, ex-alunos, patrocinadores e voluntários.
+      </div>
+      <div id="resume">
+        <Image src={GeartechLogo} alt="logo infinity" width={300} height={300}/>
+        <br/>
+        A equipe foi fundada por José Junior e Lais de Paiva na Escola SESI Canaã (Goiânia- GO- BR)no ano de 2020. No início, os membros trabalhavam em ambas as categorias (FTC e FRC). Todavia, em agosto de 2021, os membros da equipe Geartech (FTC - Ultimate Goal - 2020/21) oficializaram-se como Infinity BR, uma equipe de FRC. Atualmente, a equipe é composta por 16 membros, todos estudantes da escola SESI Canaã, e 16 mentores, que incluem engenheiros, professores, ex-alunos, patrocinadores e voluntários.
+
+      </div>
+    </Teams>
     <MainHeader/>
     </>
   )
