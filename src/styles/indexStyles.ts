@@ -29,36 +29,14 @@ display:flex;
 color:inherit;
 `;
 
-export const Main = styled.div`
-font-family:Antonio;
-font-weight:400;
-font-size:22px;
-@media(max-width:500px){
 
-}
-div{
-    display:grid;
-    justify-items:center;
-    align-items:center;
-    text-align:center;
-}
-img{
-    filter:invert(1);
-}
-ul{
-    list-style:none;
-    grid-gap:10px;
-    display:grid;
-    grid-gap:1rem;
-    grid-template-columns:1fr 1fr;
-}   
-`;
-
-export const Container = styled.div`
+export const Container = styled.section`
 display:grid;
 height:100vh;
-padding:11vh;
+padding-top:30px !important;
+scroll-snap-align:start;
 justify-content:space-between;
+align-items:center;
 grid-template-columns:1fr 1fr 1.5fr;
 grid-template-rows:1fr 0 ;
 grid-template-areas:"txt txt img" ;
@@ -85,39 +63,51 @@ div{
 }
 .image{
     grid-area:img;
+    filter:grayscale(1);
     @media(max-width:1000px){
         display:none;
-    }
+    }   
 }
 @media(max-width:500px){
-    &.top{
-    height:200vh;
-    & ${Title}{
-        font-size:40px;
-    }
-    & ${Main}{
-        font-size:36px;
-    }
-    }
-}
-`;
-export const Teams = styled.div`
-height:100vh;
-justify-content:center;
-align-items:center;
-display:flex;
-background:var(--in-blue);
 
-#resume{
-margin:0 auto;
-font-family:Antonio;
-font-weight:400;
-font-size:22px;
-padding:2%;
-width:48%;
-text-align:center;
+&.top{
+height:200vh;
+& ${Title}{
+    font-size:40px;
 }
-img{
-    filter:invert(1);
 }
+}
+
+    &.top{
+        color:white;
+        background:#101;
+
+    }
+
+    &.team{
+    height:100vh;
+    scroll-snap-align:start;
+    justify-content:center;
+    align-items:center;
+    display:flex;
+    background:var(--in-blue);
+    color:white;
+    #resume{
+    margin:0 auto;
+    font-family:Antonio;
+    font-weight:400;
+    font-size:22px;
+    padding:2%;
+    width:48%;
+    text-align:center;
+    }
+    img{
+        filter:invert(1);
+    }}
+`;
+
+export const Root = styled.div`
+scroll-snap-type:y mandatory;
+max-height:100vh;
+overflow-y:scroll;
 `;

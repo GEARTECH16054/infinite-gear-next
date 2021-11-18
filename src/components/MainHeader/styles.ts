@@ -23,7 +23,7 @@ justify-content: space-around;
 transition:0.3s;
 padding: 0 20px;
 height:5rem;
-background-color:${(ScrollProps)=>(ScrollProps.scroll > 60 ? "#DDB34D":"transparent")};
+background-color:#DDB34D;
 user-select: none;
 position: -webkit-fixed;
 position: fixed;
