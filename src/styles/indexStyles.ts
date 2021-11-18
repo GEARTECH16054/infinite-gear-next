@@ -19,6 +19,7 @@ overflow:hidden;
 top:50px;
 left:30rem;
 `;
+
 export const Title = styled.div`
 margin-top:20px;
 font-size:26px;
@@ -52,9 +53,6 @@ div{
     justify-self:center;
     align-content:center;
 }
-.title{
-    grid-area:tit;
-}
 
 .text{
     padding:15px;
@@ -63,7 +61,6 @@ div{
 }
 .image{
     grid-area:img;
-    filter:grayscale(1);
     @media(max-width:1000px){
         display:none;
     }   
@@ -79,8 +76,8 @@ height:200vh;
 }
 
     &.top{
-        color:white;
-        background:#101;
+        color:var(--white-shade);
+        background:var(--dominant);
 
     }
 
@@ -90,8 +87,8 @@ height:200vh;
     justify-content:center;
     align-items:center;
     display:flex;
-    background:var(--in-blue);
-    color:white;
+    background:var(--dominant);
+    color:var(--white-shade);
     #resume{
     margin:0 auto;
     font-family:Antonio;

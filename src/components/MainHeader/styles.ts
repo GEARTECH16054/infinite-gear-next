@@ -23,7 +23,7 @@ justify-content: space-around;
 transition:0.3s;
 padding: 0 20px;
 height:5rem;
-background-color:#DDB34D;
+background-color:transparent;
 user-select: none;
 position: -webkit-fixed;
 position: fixed;
@@ -32,7 +32,7 @@ position: fixed;
 export const Logo = styled.a`
 position:relative;
 font-weight: 700;
-color:  #112037;
+color:  #D8A31A;
 font-size:2em;
 text-transform:uppercase;
 letter-spacing:2px;
@@ -51,9 +51,9 @@ margin:0.8rem 0.8rem;
 justify-content: center;
 align-items: center;
 display:flex;
-color:#112037;
+color:#D8A31A;
 transition:all 0.1s ease;
-border:${(props) =>(props.negative ? '2px #112037 solid':'none')};
+border:${(props) =>(props.negative ? '2px #D8A31A solid':'none')};
 
     &:hover{
         background-color:#112037;
@@ -76,13 +76,13 @@ font-weight:400;
 font-family:Gotham;
 li{
     padding:18px 5px;
-    color:  #112037;
+    color: #D8A31A;
     a{
         font-size:13px;
         padding:5px;
     }
     &:hover a{
-        background-color:#112037;
+        background-color:#D8A31A;
         color:#fff;
         border-radius:5px;
         transition:all 0.2s linear;
@@ -137,7 +137,7 @@ export const BurgerIcon = styled.div<props>`
     div{
         width:2rem;
         height:0.25rem;
-        background-color:${(props) => (props.open ? ' #112037': '#333')};
+        background-color:${(props) => (props.open ? ' #89E314': '#333')};
         border-radius:2px;
         transform-origin:1px;
         transition: all 0.2s ease-in-out;

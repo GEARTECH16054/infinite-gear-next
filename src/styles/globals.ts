@@ -2,8 +2,11 @@ import { createGlobalStyle } from "styled-components";
 
 export default createGlobalStyle`
 :root{
-    --in-blue:#112037;
-    --in-gold:#ddb34d;
+    --dominant:#112037;
+    --secundary:#D8A31A;
+    --ice-blue:#b5c1e0;
+    --ice-purple:#49416b;
+    --white-shade:#f1f1e6;
     
 }
 html,
