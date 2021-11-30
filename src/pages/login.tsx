@@ -1,13 +1,14 @@
 import type { NextPage } from 'next';
 import React from 'react';
 import Head from 'next/head';
-import Link from 'next/Link';
+import Link from 'next/link';
 import Image from 'next/image';
 import InfinityLogo from '../images/logo-infinity.svg';
 import GeartechLogo from '../images/logo-geartech.svg';
 import { Form, Header, Page, Root } from '../styles/loginStyle';
 
 const Login:NextPage   = () => {
+
     return (
         <>
             <Head>
@@ -18,9 +19,9 @@ const Login:NextPage   = () => {
             <Root>
             <div className='main'>
             <Header>
-                <Image src={InfinityLogo} alt="Infinity" height={50} width={50}/>
-                Infinite-Gear
-                <Image src={GeartechLogo} alt="Infinity" height={50} width={50}/>
+                <div className='logo'><Image src={InfinityLogo} alt="Infinity" height={50} width={50}/></div>
+                Infinite<br/>Gear
+                <div className='logo'><Image src={GeartechLogo} alt="Infinity" height={50} width={50}/></div>
             </Header>
             <Page>
 
@@ -34,12 +35,12 @@ const Login:NextPage   = () => {
             </Form>
             <div className='hr'/>
             <Form>
-            <input/>
-            <input/>
-            <button className='login'>
+            <input placeholder='E-mail'/>
+            <input placeholder='Input' type='password'/>
+            <button className='login' onClick={() => console.log('loging in')}>
                 Login
             </button>
-            <div className='newA'>Não tem uma conta?<Link href="/signin">cadastre-se</Link></div>
+            <div className='newA'>Não tem uma conta? <Link href="/signin">Cadastre-se</Link></div>
             </Form>
             </Page>
             </div>

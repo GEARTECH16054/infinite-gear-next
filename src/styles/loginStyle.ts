@@ -46,7 +46,7 @@ button{
     border-radius:10px;
     border:none;
     margin:3px 0;
-    height:20px;
+    height:25px;
     width:100%;
 }
 .socials{
@@ -68,6 +68,10 @@ button{
 }
 .newA{
     color:white;
+    a{
+
+        text-decoration:underline;
+    }
 }
 
 
@@ -78,23 +82,35 @@ flex-direction:column;
 display:flex;
 width:20rem;
 input{
-    border-radius:5px;
+    border-radius:10px;
+    text-align:center;
+    color:var(--black-shade);
     height:3.5vh;
+    background-color:#ebebeb;
     width:100% ;
     padding:.5vh;
     border:solid #333 .5px;
     margin:5px 0;
     outline:none;
+    ::placeholder{
+        color:var(--black-shade);
+    }
 }
+
 
 `;
 
 export const Header = styled.div`
 display:flex;
-justify-content:center;
-align-items:center;
+justify-content:space-around;
+align-items:flex-end;
 font-family:Bitsumishi;
 font-size:38px;
 filter:invert(1);
+text-align:center;
 margin-bottom: 2rem;
+.logo{
+    margin-left:5px;
+    margin-right:5px;
+}
 `;
