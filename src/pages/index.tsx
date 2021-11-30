@@ -39,6 +39,9 @@ const Landing: NextPage = () => {
       </div>
       <div className='image'><Image alt="RSF logo" src={RSFLogo} height={500} width={500}/></div>
     </Container>
+    <Container>
+      
+    </Container>
     
     <MainHeader/>
     </Root>
